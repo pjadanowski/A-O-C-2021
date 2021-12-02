@@ -5,9 +5,10 @@ include __DIR__ . '/../utils/utils.php';
 
 function part1(): int
 {
-    $measurements = openFile(__DIR__ .'/input.txt');
+    $measurements = openFile(__DIR__ . '/input.txt');
 
     $counter = 0;
+
     for ($i = 1; $i < count($measurements); $i++) {
         if ($measurements[$i - 1] < $measurements[$i]) {
             $counter++;
@@ -19,9 +20,10 @@ function part1(): int
 
 function part2(): int
 {
-    $measurements = openFile(__DIR__ .'/input.txt');
+    $measurements = openFile(__DIR__ . '/input.txt');
 
     $counter = 0;
+    
     for ($i = 0; $i < count($measurements) - 3; $i++) {
         if ($measurements[$i] < $measurements[$i + 3]) {
             $counter++;
