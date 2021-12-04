@@ -1,0 +1,23 @@
+{
+    "name": "pjadanowski/aoc-2021",
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "pjadanowski\\Aoc2021\\Day4\\": "day4/"
+        },
+        "files": [
+            "./utils/utils.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Pawel",
+            "email": "pjadanowski@gmail.com"
+        }
+    ]
+}

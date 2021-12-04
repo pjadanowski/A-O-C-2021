@@ -3,15 +3,18 @@
 
 function openFile(string $filepath): array
 {
-    $arr = [];
+    $lines = [];
     if ($file = fopen($filepath, "r")) {
-        while (($line = trim(fgets($file))) !== '') {
-            $arr[] = $line;
+        while(!feof($file)) {
+            $line = trim(fgets($file));
+            if ($line !== '') {
+                $lines[] = $line;
+            }
         }
         fclose($file);
     }
 
-    return $arr;
+    return $lines;
 }
 
 
@@ -35,7 +38,7 @@ function println(string $message): void
     print($message) . PHP_EOL;
 }
 
-function printResult(int $result): void
+function printResult(int|float $result): void
 {
     println("Result: $result");
 }
